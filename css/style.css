@@ -501,5 +501,7 @@ footer ul li a:hover {
         grid-template-columns: 1fr;
         place-items: center;
         text-align: center;
+        margin: 0;
+        padding: 0;
     }
 }
