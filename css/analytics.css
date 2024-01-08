@@ -1,0 +1,120 @@
+nav {
+    border-bottom: solid .4rem var(--color-bg2);
+    box-shadow: .5rem .5rem .5rem var(--color-black);
+}
+
+.analytics {
+    margin-top: 7rem
+}
+
+.analytics__container {
+    min-width: 24rem;
+}
+
+.analytics__container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+}
+
+.analytics__left {
+    position: relative;
+    margin-top: 4rem;
+}
+
+.analytics__image-lg {
+    width: 29rem;
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    filter: saturate(0) brightness(0.3);
+    transition: var(--transition)
+}
+
+.analytics__image-sm {
+    width: 28rem;
+    overflow: hidden;
+    position: absolute;
+    left: -2rem;
+    top: -2rem;
+    transition: var(--transition);
+}
+
+.analytics__left:hover .analytics__image-sm {
+    opacity: 0;
+}
+
+.analytics__left:hover .analytics__image-lg {
+   filter: saturate(1) brightness(1);
+   border: 1rem solid var(--color-bg2);
+   top: 0;
+   left: 0; 
+}
+
+.analytics__right p {
+    margin: 1.6rem 3rem 1.6rem 6rem;
+}
+
+.chart {
+    margin: 5rem 10rem;
+}
+
+.chart h2 {
+    line-height: 2.5rem;
+}
+
+canvas#chart {
+    background: var(--color-bg2);
+    max-width: 100%;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    padding: 3rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .analytics {
+        margin-top: 10rem;
+        height: fit-content;
+        display: grid;
+        place-items: center;
+    }
+
+    .analytics__image-bg, .analytics__image-sm {
+        display: none;
+    }
+
+    .analytics__container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .analytics__image-lg {
+        filter: saturate(1) brightness(1);
+        border: 1rem solid var(--color-bg2);
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .chart {
+        margin: 5rem 1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .analytics {
+        padding: 0;
+    }
+
+    .analytics__left {
+        margin-top: 0;
+    }
+
+    .analytics__right p {
+        text-align: center;
+        margin: 0;
+        padding: 0 4rem;
+    }
+}
