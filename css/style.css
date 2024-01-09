@@ -496,6 +496,9 @@ footer ul li a:hover {
         grid-template-columns: 1fr;
     }
 
+    .swiper-wrapper {
+        height: 30rem;
+    }
 
     .footer__container {
         grid-template-columns: 1fr;
